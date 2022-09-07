@@ -1,0 +1,8 @@
+- Responsiveness
+- Check other bgs
+- API
+- Routing (Change pages)
+- SSR
+- Readme
+- GitHub
+- Deploy
