@@ -4,7 +4,9 @@ import utilisationImg from '../images/utilisation.jpg';
 const Utilisation = () => {
   return (
 		<main className="basis-[70%] ">
-			<h1 className="font-bellefair text-[4rem]">Utilisation</h1>
+			<h1 className="font-bellefair font-bold text-[2.5rem] md:text-[4rem] md:font-regular">
+				Utilisation
+			</h1>
 			<div className="font-barlow font-regular text-[14px]">
 				<em>by</em> John Doe <em>at</em> 18th, Dec, 2020
 			</div>
