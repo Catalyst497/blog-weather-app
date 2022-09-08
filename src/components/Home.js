@@ -3,7 +3,7 @@ import React from 'react';
 const Home = () => {
 	return (
 		<main className="basis-[70%] ">
-			<h1 className="font-bellefair text-[4rem]">Lorem ipsum dolor sit</h1>
+			<h1 className="font-bellefair text-[2rem] md:text-[4rem]">Lorem ipsum dolor sit</h1>
 			<div className="font-barlow font-regular text-[14px]">
 				<em>by</em> John Doe <em>at</em> 18th, Dec, 2020
 			</div>
