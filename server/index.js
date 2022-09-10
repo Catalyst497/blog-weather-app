@@ -22,8 +22,8 @@ const server = http.createServer((req, res) => {
 	 *  /main.js
 	 */
 	if (path == '') {
-		path = 'index.html';
-		let file = __dirname + '/../build/' + path;
+		path = 'src/index.html';
+		let file = __dirname + '/' + path;
 		fs.readFile(file, 'utf-8', (err, data) => {
 			if (err) {
 				console.log(err);

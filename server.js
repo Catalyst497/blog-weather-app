@@ -25,11 +25,11 @@ const server = http.createServer((req, res) => {
 		path == 'fabrication' ||
 		path == 'utilisation'
 	) {
-		path = 'index.html';
+		path = 'src/index.html';
 	}
 	console.log(`Requested path ${path} `);
 
-	let file = __dirname + '/./build/' + path;
+	let file = __dirname + '/' + path;
 	//async read file function uses callback
 	fs.readFile(file, function (err, content) {
 		if (err) {

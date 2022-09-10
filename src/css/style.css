@@ -5,10 +5,10 @@
 @tailwind utilities;
 
 body {
-    @apply font-barlow text-[1rem] bg-black text-white;
+	@apply font-barlow text-[1rem] bg-black text-white;
 }
 hr {
-    @apply border-none;
+	@apply border-none;
 }
 /* Chrome, Safari, Edge, Opera */
 input[type='number']::-webkit-outer-spin-button,
@@ -25,3 +25,4 @@ textarea:focus {
 	border: none;
 	outline: none;
 }
+
