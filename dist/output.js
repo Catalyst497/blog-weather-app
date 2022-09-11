@@ -66,33 +66,57 @@ window.addEventListener('load', () => {
 //// Implementing the single-pageness of the blog posts
 const active = 'text-amber-700';
 const blogs = document.querySelectorAll('main.Blog');
-// On Nav link clicks
-const navCall = (elem) => {
-	document
-		.querySelectorAll('ul > li')
-		.forEach((li) => li.classList.remove(active));
-	// blogs.forEach((blog) => blog.classList.add('.hidden'));
-	// blogs.forEach((blog) => {
-	// 	blog.classList.contains(elem.textContent) &&
-	// 		blog.classList.remove('.hidden');
-	// });
-	location.pathname += `/${elem.textContent}`;
-	elem.classList.add(active);
-};
-// Check page pathname to decide what blog to show
-let currentPage = location.pathname;
+const items = document.querySelectorAll('ul > a');
 
-// listen for changes
-setInterval(function () {
-	if (currentPage != location.pathname) {
-		currentPage = location.pathname;
-		blogs.forEach((blog) => blog.classList.add('.hidden'));
+const page = location.href.replace(`${location.origin}/`, '');
+items.forEach((item) => item.classList.remove(active));
+items.forEach((item) => {
+	const itemLink = item.getAttribute('href').replace(`${location.origin}/`, '');
+	if (itemLink == page || itemLink == 'home') {
+		item.classList.add(active);
+	}
+});
+
+function changeWithoutReload(cls) {
+	const point = cls.href.replace(`${location.origin}/`, '');
+	
+	blogs.forEach((blog) => blog.classList.add('hidden'));
+	if(point === '') {
+		document.querySelector('main.Blog.home').classList.remove('hidden');
+	}else {
 		blogs.forEach((blog) => {
-			blog.classList.contains(
-				currentPage.split('/src/index.html/').pop()
-					? currentPage.split('/src/index.html/').pop()
-					: currentPage.slice(1)
-			) && blog.classList.remove('.hidden');
+			if (blog.classList.contains(point)) {
+				blog.classList.remove('hidden');
+			}
 		});
 	}
-}, 500);
+	
+}
+changeWithoutReload(location);
+// On Nav link clicks
+const navCall = (e) => {
+	e = e || window.event;
+	e.preventDefault();
+	window.history.pushState({}, '', e.target.href);
+	items
+		.forEach((a) => a.classList.remove(active));
+	e.target.classList.add(active);
+	changeWithoutReload(e.target);
+};
+// Check page pathname to decide what blog to show
+// let currentPage = location.pathname;
+
+// listen for changes
+// setInterval(function () {
+// 	if (currentPage != location.pathname) {
+// 		currentPage = location.pathname;
+// 		blogs.forEach((blog) => blog.classList.add('.hidden'));
+// 		blogs.forEach((blog) => {
+// 			blog.classList.contains(
+// 				currentPage.split('/src/index.html/').pop()
+// 					? currentPage.split('/src/index.html/').pop()
+// 					: currentPage.slice(1)
+// 			) && blog.classList.remove('.hidden');
+// 		});
+// 	}
+// }, 500);

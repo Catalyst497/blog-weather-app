@@ -21,6 +21,7 @@ const server = http.createServer((req, res) => {
 	 */
 	if (
 		path == '' ||
+		path == 'home' ||
 		path == 'solution' ||
 		path == 'fabrication' ||
 		path == 'utilisation'

@@ -41,40 +41,45 @@
 					<ul
 						class="top-[4rem] right-2 transition-opacity absolute bg-black text-white p-4 rounded-[0.5rem] hidden mobile-nav_"
 					>
-						<!-- <Li url="" active={true} class="" cont="Home" /> -->
+						<!-- <a
+								href="" url="" active={true} class="" cont="Home" /> -->
 						<!-- onClick={updateActiveClass} -->
 						<!-- {`${
 							window.location.pathname == '/' && cont == 'home' && active
 						} ${window.location.pathname == `/${cont}` && active} ${
 							class && class
 						} -->
-						<li
+						<a
+							href="/home"
 							class="uppercase hover:text-amber-700 transition-colors duration-500"
-							onclick="navCall(this)"
+							onclick="navCall()"
 						>
 							Home
-						</li>
+					</a>
 						<hr />
-						<li
+						<a
+							href="/fabrication"
 							class="uppercase hover:text-amber-700 transition-colors duration-500"
-							onclick="navCall(this)"
+							onclick="navCall()"
 						>
 							Fabrication
-						</li>
+					</a>
 						<hr />
-						<li
+						<a
+							href="/utilisation"
 							class="uppercase hover:text-amber-700 transition-colors duration-500"
-							onclick="navCall(this)"
+							onclick="navCall()"
 						>
 							Utilisation
-						</li>
+					</a>
 						<hr />
-						<li
+						<a
+							href="/solution"
 							class="uppercase hover:text-amber-700 transition-colors duration-500"
-							onclick="navCall(this)"
+							onclick="navCall()"
 						>
 							Solution
-						</li>
+					</a>
 					</ul>
 				</div>
 			</header>
@@ -97,37 +102,41 @@
 						/>
 					</div>
 					<ul class="flex justify-end gap-[2rem] mx-auto">
-						<li
+						<a
+							href="home"
 							class="uppercase hover:text-amber-700 transition-colors duration-500"
-							onclick="navCall(this)"
+							onclick="navCall()"
 						>
 							Home
-						</li>
-						<li
+					</a>
+						<a
+							href="fabrication"
 							class="uppercase hover:text-amber-700 transition-colors duration-500"
-							onclick="navCall(this)"
+							onclick="navCall()"
 						>
 							Fabrication
-						</li>
-						<li
+					</a>
+						<a
+							href="utilisation"
 							class="uppercase hover:text-amber-700 transition-colors duration-500"
-							onclick="navCall(this)"
+							onclick="navCall()"
 						>
 							Utilisation
-						</li>
-						<li
+					</a>
+						<a
+							href="solution"
 							class="uppercase hover:text-amber-700 transition-colors duration-500"
-							onclick="navCall(this)"
+							onclick="navCall()"
 						>
 							Solution
-						</li>
+					</a>
 					</ul>
 				</nav>
 				<div
 					class="text-black flex md:items-start md:flex-row flex-col-reverse justify-between mt-[2rem] p-4"
 				>
 					<!-- Home -->
-					<main class="basis-[70%] Blog Home">
+					<main class="basis-[70%] Blog home">
 						<h1
 							class="font-bellefair font-bold text-[2.5rem] md:text-[4rem] md:font-regular"
 						>
@@ -156,7 +165,7 @@
 					</main>
 
 					<!-- Fabrication -->
-					<main class="basis-[70%] hidden Blog Fabrication">
+					<main class="basis-[70%] hidden Blog fabrication">
 						<h1
 							class="font-bellefair font-bold text-[2.5rem] md:text-[4rem] md:font-regular"
 						>
@@ -185,7 +194,7 @@
 					</main>
 
 					<!-- Utilisation -->
-					<main class="basis-[70%] hidden Blog Home">
+					<main class="basis-[70%] hidden Blog utilisation">
 						<h1
 							class="font-bellefair font-bold text-[2.5rem] md:text-[4rem] md:font-regular"
 						>
@@ -197,7 +206,7 @@
 						<div class="my-8 mx-auto max-w-[90%]">
 							<img
 								class="w-full"
-								src="images/utilisation.jpg"
+								src="/src/images/utilisation.jpg"
 								alt="utilisation"
 							/>
 						</div>
@@ -221,7 +230,7 @@
 					</main>
 
 					<!-- Solution -->
-					<main class="basis-[70%] hidden Blog Home">
+					<main class="basis-[70%] hidden Blog solution">
 						<h1
 							class="font-bellefair font-bold text-[2.5rem] md:text-[4rem] md:font-regular"
 						>
@@ -231,7 +240,7 @@
 							<em>by</em> John Doe <em>at</em> 18th, Dec, 2020
 						</div>
 						<div class="my-8 mx-auto max-w-[90%]">
-							<img class="w-full" src="{solutionImg}" alt="solution" />
+							<img class="w-full" src="/src/images/solution.jpg" alt="solution" />
 						</div>
 						<p class="mt-2">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -259,7 +268,8 @@
 						<Route path="/solution" element="{<Solution" />} />
 					</Routes> -->
 
-					<aside class="bg-gray-200 basis-[20%] rounded-lg p-4">
+					<a
+						href=""side class="bg-gray-200 basis-[20%] rounded-lg p-4">
 						<div class="font-bellefair">
 							<span class="city_"></span>, <span class="country_"></span>
 							<!-- {}, {} -->
