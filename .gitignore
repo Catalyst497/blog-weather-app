@@ -1,8 +1,5 @@
 node_modules/
 .env
 build/
-*.config.js
-*.server.js
-**/components/
 **/css/
 src/*.js
