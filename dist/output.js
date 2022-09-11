@@ -31,7 +31,7 @@ window.addEventListener('load', () => {
 
 			// API URL
 			const base =
-				`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&` +
+				`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&` +
 				`lon=${lon}&appid=${key}`;
 
 			// Calling the API
@@ -55,7 +55,7 @@ window.addEventListener('load', () => {
 					let icon1 = data.weather[0].icon;
 					icon.setAttribute(
 						'src',
-						`http://openweathermap.org/img/w/${icon1}.png`
+						`https://openweathermap.org/img/w/${icon1}.png`
 					);
 					// icon.innerHTML = `<img src="icons/${icon1}.svg" style= 'height:10rem'/>`;
 				});
