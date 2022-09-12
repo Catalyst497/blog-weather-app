@@ -1,3 +1,5 @@
 node_modules/
+client/scss/
+client/css/*.map
 
 

@@ -8,58 +8,71 @@
 		/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<link rel="stylesheet" href="css/style.css" />
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+			rel="stylesheet"
+		/>
 		<title>Document</title>
 	</head>
 	<body>
-		<h1>Yo</h1>
-		<nav></nav>
-		<div class="nav-links">
-			<ul>
-				<li><a href="/" onclick="route()" id="accu">Accueil</a></li>
-				<li>
-					<a href="/Fabrication" onclick="route()" id="fabr">Fabrication</a>
-				</li>
-				<li>
-					<a href="/Utilisation" onclick="route()" id="util"> Utilisation</a>
-				</li>
-				<li>
-					<a href="/Elimination" onclick="route()" id="elim"> Elimination</a>
-				</li>
-				<li><a href="/Solution" onclick="route()" id="solu">Solution</a></li>
-			</ul>
-		</div>
-		<div id="main"></div>
-		<aside class="bg-gray-200 basis-[20%] rounded-lg p-4">
-			<div class="font-bellefair">
-				<span class="city"></span>, <span class="country"></span>
-			</div>
+		<header>
+			<h1>Projet 1</h1>
+			<p>L'informatique, cs pollue</p>
+		</header>
+		<div class="body">
+			<nav>
+				<ul>
+					<li><a href="/" onclick="route()" id="accu">Accueil</a></li>
+					<li>
+						<a href="/Fabrication" onclick="route()" id="fabr">Fabrication</a>
+					</li>
+					<li>
+						<a href="/Utilisation" onclick="route()" id="util"> Utilisation</a>
+					</li>
+					<li>
+						<a href="/Elimination" onclick="route()" id="elim"> Elimination</a>
+					</li>
+					<li><a href="/Solution" onclick="route()" id="solu">Solution</a></li>
+				</ul>
+			</nav>
+			<div class="content">
+				<div id="main"></div>
+				<aside class="aside">
+					<div class="place">
+						<span class="city"></span>, <span class="country"></span>
+					</div>
+					<div class="dt"></div>
+					<div class="temp">Temprature: <span class="temperature"></span></div>
+					<div class="weather">
+						<!-- Weather Icon -->
+						<img src="" alt="weather-icon" class="weather-icon" />
+						<div>
+							<h1 class="weather-main"></h1>
+							<p class="description"></p>
+						</div>
+					</div>
 
-			<div class="flex weather">
-				<!-- Weather Icon -->
-				<img src="" alt="weather-icon" class="max-w-[50%] weather-icon" />
-				<div>
-					<h1 class="text-[1.5rem] text-black capitalize weather-main">
-					</h1>
-					<p class="text-[14px] text-gray-800 description">
-					</p>
-				</div>
+					<!-- <div class="">
+						<div>Sunrise: <span class="sunrise"></span></div>
+						<div>Sunset: <span class="sunset"></span></div>
+					</div> -->
+					<label for="">Recherche</label>
+					<div class="searchbar">
+						<i class="fa fa-search"></i>
+						<input type="text" placeholder="Recherche..." />
+					</div>
+				</aside>
 			</div>
-			<div></div>
-			<div class="py-4 text-[14px]">
-				<div>
-					Temprature: <span class="temperature"></span
-					>
-				</div>
-				<div>
-					Sunrise: <span class="sunrise"></span
-					>
-				</div>
-				<div>
-					Sunset: <span class="sunset"></span
-					>
-				</div>
-			</div>
-		</aside>
+			<footer>
+				COPYRIGHT @ VOTRE NOM - TOUS DROITS RESERVES
+			</footer>
+		</div>
 	</body>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment-with-locales.min.js"
+		integrity="sha512-vFABRuf5oGUaztndx4KoAEUVQnOvAIFs59y4tO0DILGWhQiFnFHiR+ZJfxLDyJlXgeut9Z07Svuvm+1Jv89w5g=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"
+	></script>
 	<script src="js/index.js"></script>
 </html>
