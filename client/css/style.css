@@ -177,6 +177,9 @@ header h1 {
   list-style-type: circle;
   list-style-position: inside;
 }
+.body .content #main img {
+  max-width: 100%;
+}
 .body .content aside {
   flex-basis: 20rem;
   background-color: #e6e6e6;
